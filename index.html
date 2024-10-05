@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Convidados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/food-icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Controle de Convidados e Churrasco</h1>
+        <button id="installButton" class="install-btn">Instalar App</button>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Cadastro de Convidados</h2>
+            <input type="text" id="nomeConvidado" placeholder="Nome do Convidado">
+            <select id="pagamentoConvidado">
+                <option value="sim">Pagou</option>
+                <option value="nao">Não Pagou</option>
+            </select>
+            <button class="btn" onclick="adicionarConvidado()">Adicionar Convidado</button>
+        </section>
+        
+        <section>
+            <h2>Lista de Convidados</h2>
+            <ul id="listaConvidados"></ul>
+            <p>Total de convidados: <span id="totalConvidados">0</span></p>
+        </section>
+        
+        <section>
+            <h2>Cardápio</h2>
+            <ul>
+                <li>Arroz: <span id="qtdArroz">0</span> kg - Valor por kg: R$ <input type="number" id="precoArroz" value="5"> 
+                    <strong>Total: R$ <span id="totalArroz">0</span></strong>
+                </li>
+                <li>Farofa: <span id="qtdFarofa">0</span> kg - Valor por kg: R$ <input type="number" id="precoFarofa" value="10"> 
+                    <strong>Total: R$ <span id="totalFarofa">0</span></strong>
+                </li>
+                <li>Carne: <span id="qtdCarne">0</span> kg - Valor por kg: R$ <input type="number" id="precoCarne" value="25">
+                    <strong>Total: R$ <span id="totalCarne">0</span></strong>
+                </li>
+                <li>Salada de Batata: <span id="qtdSaladaBatata">0</span> kg - Valor por kg: R$ <input type="number" id="precoSaladaBatata" value="8">
+                    <strong>Total: R$ <span id="totalSaladaBatata">0</span></strong>
+                </li>
+                <li>Salada Verde: <span id="qtdSaladaVerde">0</span> kg - Valor por kg: R$ <input type="number" id="precoSaladaVerde" value="6">
+                    <strong>Total: R$ <span id="totalSaladaVerde">0</span></strong>
+                </li>
+                <li>Refrigerante: <span id="qtdRefrigerante">0</span> litros - Valor por litro: R$ <input type="number" id="precoRefrigerante" value="4">
+                    <strong>Total: R$ <span id="totalRefrigerante">0</span></strong>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Designação de Responsabilidades</h2>
+            <p>Escolha um convidado e designe um item para ele trazer.</p>
+            <select id="convidadoSelect"></select>
+            <select id="itemSelect">
+                <option value="Arroz">Arroz</option>
+                <option value="Farofa">Farofa</option>
+                <option value="Carne">Carne</option>
+                <option value="Salada de Batata">Salada de Batata</option>
+                <option value="Salada Verde">Salada Verde</option>
+                <option value="Refrigerante">Refrigerante</option>
+            </select>
+            <button class="btn" onclick="designarResponsabilidade()">Designar</button>
+            <ul id="responsabilidades"></ul>
+        </section>
+        <!-- Continua o código HTML existente -->
+<section>
+    <h2>Despesas Extras</h2>
+    <ul>
+        <li>Aluguel da Chácara: R$ <input type="number" id="aluguelChacara" value="0"></li>
+        <li>Sobremesa: R$ <input type="number" id="sobremesa" value="0"></li>
+        <li>Descartáveis: R$ <input type="number" id="descartaveis" value="0"></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Total e Divisão por Convidado</h2>
+    <p>Total Geral (Cardápio + Despesas Extras): R$ <span id="totalGeral">0</span></p>
+    <p>Custo por Convidado: R$ <span id="custoPorConvidado">0</span></p>
+</section>
+
+<script src="script.js"></script>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
